@@ -1,0 +1,225 @@
+,constituency,district,name,gender,age,party,const_category,total_electors,total_const_votes,votes,candidate_voteshare_percent
+0,Afzalpur,Gulbarga,Malikayya Venkayya Guttedar,M,57,INC,GEN,190336,128606,38093,29.62
+1,Aland,Gulbarga,B.R.Patil,M,63,KJP,GEN,192986,132385,67085,50.67
+2,Anekal,Bangalore Urban,Shivanna.B,M,46,INC,SC,270767,186461,105464,56.56
+3,Arabhavi,Belgaum,Balachandra Laxmanrao Jarkiholi,M,47,BJP,GEN,196454,145099,99283,68.42
+4,Arkalgud,Hassan,Manju A,M,55,INC,GEN,197950,170262,61369,36.04
+5,Arsikere,Hassan,K M Shivalingegowda,M,55,JD(S),GEN,197423,158869,76579,48.2
+6,Athani,Belgaum,Laxman Sangappa Savadi,M,53,BJP,GEN,186167,146290,74299,50.79
+7,Aurad,Bidar,Prabhu B. Chavhan,M,44,BJP,SC,189099,129101,61826,47.89
+8,B.T.M.Layout,B.B.M.P(South),Ramalinga Reddy,M,60,INC,GEN,206974,110486,69712,63.1
+9,Babaleshwar,Bijapur,M.B.Patil,M,49,INC,GEN,184083,134348,62061,46.19
+10,Badami,Bagalkot,Chimmanakatti Balappa Bhimappa,M,62,INC,GEN,196662,139071,57446,41.31
+11,Bagalkot,Bagalkot,Meti Hullappa Yamanappa,M,68,INC,GEN,201375,139966,68216,48.74
+12,Bagepalli,Chikkaballapur,S. N. Subbareddy (Chinnakayalapalli),M,47,IND,GEN,175917,150498,66227,44.01
+13,Bailhongal,Belgaum,Vishwanath Patil,M,48,KJP,GEN,163270,126797,40709,32.11
+14,Bangalore South,Bangalore Urban,M Krishnappa,M,50,BJP,GEN,447562,250737,102207,40.76
+15,Bangarapet,Kolar,S.N Narayanaswamy K.M,M,45,INC,SC,172912,141858,71570,50.45
+16,Bantval,Dakshina Kannada,B. Ramanatha Rai,M,61,INC,GEN,197060,156188,81665,52.29
+17,Basavakalyan,Bidar,Mallikarjun Sidramappa Khuba,M,36,JD(S),GEN,198007,126172,37494,29.72
+18,Basavana Bagevadi,Bijapur,Shivanand S Patil,M,53,INC,GEN,175846,126819,56329,44.42
+19,Basavanagudi,B.B.M.P(South),Ravi Subramanya.L.A.,M,55,BJP,GEN,198604,103647,43876,42.33
+20,Belgaum Dakshin,Belgaum,Sambhaji Lakshman Patil,M,62,IND,GEN,202238,131946,54426,41.25
+21,Belgaum Rural,Belgaum,Sanjay B Patil,M,44,BJP,GEN,205568,152059,38322,25.2
+22,Belgaum Uttar,Belgaum,Fairoz Nuruddin Saith,M,61,INC,GEN,193980,115183,45125,39.18
+23,Bellary,Bellary,B. Sreeramulu,M,42,BSRC,ST,173111,130314,74854,57.44
+24,Bellary City,Bellary,Anil H Lad,M,39,INC,GEN,194202,119471,52098,43.61
+25,Belthangady,Dakshina Kannada,K Vasantha Bangera,M,68,INC,GEN,193864,146229,74530,50.97
+26,Belur,Hassan,Rudresh Gowda. Y. N,M,57,INC,GEN,174842,132940,48802,36.71
+27,Bhadravati,Shimoga,M.J.Appaji,M,60,JD(S),GEN,199358,143556,78370,54.59
+28,Bhalki,Bidar,Eshwara Khandre,M,51,INC,GEN,200474,147091,58012,39.44
+29,Bhatkal,Uttara Kannada,Mankala Subba Vaidya,M,41,IND,GEN,189664,134517,37319,27.74
+30,Bidar,Bidar,Gurupadappa Nagamarpalli,M,71,KJP,GEN,190262,112971,50718,44.89
+31,Bidar South,Bidar,Ashok Kheny,M,62,KMP,GEN,181107,124857,47763,38.25
+32,Bijapur City,Bijapur,Makbul S Bagawan,M,44,INC,GEN,211756,119021,48615,40.85
+33,Bilgi,Bagalkot,Jagadish Patil,M,63,INC,GEN,190466,149179,66655,44.68
+34,Bommanahalli,B.B.M.P(South),M.Sathish Reddy,M,41,BJP,GEN,323091,174734,86552,49.53
+35,Byadgi,Haveri,Basavaraj Neelappa Shivannanavar,M,57,INC,GEN,180548,149831,57707,38.51
+36,Byatarayanapura,Bangalore Urban,Krishna Byre Gowda,M,40,INC,GEN,330387,208322,96125,46.14
+37,Byndoor,Udupi,K Gopala Poojari,M,53,INC,GEN,194914,148090,82277,55.56
+38,C.V. Raman Nagar,B.B.M.P(North),S. Raghu,M,43,BJP,SC,197124,106178,53364,50.26
+39,Challakere,Chitradurga,T.Raghumurthy,M,50,INC,ST,188758,147776,60197,40.74
+40,Chamaraja,Mysore,Vasu,M,60,INC,GEN,198462,109938,41930,38.14
+41,Chamarajanagar,Chamarajnagar,C Puttarangashetty,M,59,INC,GEN,186873,146760,54440,37.09
+42,Chamrajpet,B.B.M.P(Central),B.Z.Zameer Ahmed Khan,M,48,JD(S),GEN,183009,107679,56339,52.32
+43,Chamundeshwari,Mysore,G.T Devegowda,M,63,JD(S),GEN,239448,176962,75864,42.87
+44,Channagiri,Davangere,Vadnal Rajanna,M,61,INC,GEN,175842,143385,53355,37.21
+45,Channapatna,Ramanagaram,C P Yogeshwara,M,50,SP,GEN,198764,168511,80099,47.53
+46,Chickpet,B.B.M.P(Central),R.V.Devaraj,M,55,INC,GEN,187694,108814,44714,41.09
+47,Chikkaballapur,Chikkaballapur,K.Sudhakar,M,39,INC,GEN,176367,146709,74914,51.06
+48,Chikkodi-Sadalga,Belgaum,Prakash Hukkeri,M,66,INC,GEN,187308,149375,102237,68.44
+49,Chikmagalur,Chikmagalur,C.T.Ravi,M,45,BJP,GEN,191175,139045,58683,42.2
+50,Chiknayakanhalli,Tumkur,C B Suresh Babu,M,42,JD(S),GEN,198417,160826,60759,37.78
+51,Chincholi,Gulbarga,Umesh G. Jadav,M,54,INC,SC,169337,112983,58599,51.87
+52,Chintamani,Chikkaballapur,J.K Krishnareddy,M,46,JD(S),GEN,186465,158113,68950,43.61
+53,Chitradurga,Chitradurga,G.H.Thippareddy,M,66,BJP,GEN,225280,163365,62228,38.09
+54,Chittapur,Gulbarga,Priyank .M.Kharge,M,34,INC,SC,190429,123716,69379,56.08
+55,Dasarahalli,Bangalore Urban,S Muniraju,M,55,BJP,GEN,344606,191258,57562,30.1
+56,Davanagere North,Davangere,S.S.Mallikarjun,M,45,INC,GEN,208005,134450,88101,65.53
+57,Davanagere South,Davangere,Shamanur Shivashankarappa,M,81,INC,GEN,182370,120410,66320,55.08
+58,Devadurga,Raichur,A Venkatesh Naik,M,76,INC,ST,182856,127422,62070,48.71
+59,Devanahalli,Bangalore Rural,Pillamunishamappa,M,48,JD(S),SC,185376,153547,70323,45.8
+60,Devar Hippargi,Bijapur,Aminappagouda Patil,M,44,INC,GEN,178141,115245,36231,31.44
+61,Dharwad,Dharwad,Vinay Kulkarni,M,46,INC,GEN,183561,133018,53453,40.18
+62,Doddaballapur,Bangalore Rural,T.Venkataramanaiah,M,52,INC,GEN,183115,148302,38877,26.21
+63,Gadag,Gadag,H K Patil,M,60,INC,GEN,191106,136314,70475,51.7
+64,Gandhi Nagar,B.B.M.P(Central),Dinesh Gundu Rao,M,43,INC,GEN,192936,110828,54968,49.6
+65,Gangawati,Koppal,Iqbal Ansari,M,51,JD(S),GEN,170865,125343,60303,48.11
+66,Gauribidanur,Chikkaballapur,N H Shivashankara Reddy,M,59,INC,GEN,186720,149168,50131,33.61
+67,Gokak,Belgaum,Jarkiholi Ramesh Laxmanrao,M,52,INC,GEN,202371,144327,79175,54.86
+68,Govindraj Nagar,B.B.M.P(South),Priyakrishna,M,29,INC,GEN,239465,131237,72654,55.36
+69,Gubbi,Tumkur,S.R.Srinivas,M,51,JD(S),GEN,167885,139659,58783,42.09
+70,Gulbarga Dakshin,Gulbarga,Dattatraya C.Patil Revoor (Appu Gouda),M,31,BJP,GEN,211956,117303,36850,31.41
+71,Gulbarga Rural,Gulbarga,G. Ram Krishana,M,72,INC,SC,211123,123418,40075,32.47
+72,Gulbarga Uttar,Gulbarga,Qamarul Islam,M,66,INC,GEN,208698,104839,50498,48.17
+73,Gundlupet,Chamarajnagar,H S Mahadevaprasad,M,55,INC,GEN,190420,162326,73723,45.42
+74,Gurmitkal,Yadgir,Baburao Chinchanasoor,M,62,INC,GEN,203045,129030,36051,27.94
+75,Hadagalli,Bellary,P.T .Parameshwaranaik,M,48,INC,SC,157285,116099,59336,51.11
+76,Hagaribommanahalli,Bellary,Bheema Naik.L.B.P.,M,39,JD(S),SC,185145,144826,51972,35.89
+77,Haliyal,Uttara Kannada,Deshpande Raghunath,M,66,INC,GEN,157649,120150,55005,45.78
+78,Hangal,Haveri,Manohar Thashildar,M,67,INC,GEN,173934,144395,66324,45.93
+79,Hanur,Chamarajnagar,R Narendra,M,55,INC,GEN,181142,137852,55684,40.39
+80,Harapanahalli,Davangere,M P Ravindra,M,44,INC,GEN,184923,150223,56954,37.91
+81,Harihar,Davangere,H.S. Shivashankar,M,44,JD(S),GEN,194111,150743,59666,39.58
+82,Hassan,Hassan,H.S.Prakash,M,61,JD(S),GEN,188414,131059,61306,46.78
+83,Haveri,Haveri,Rudrappa Manappa Lamani,M,54,INC,SC,198638,150469,83119,55.24
+84,Hebbal,B.B.M.P(North),R Jagadeesh Kumar,M,56,BJP,GEN,210497,115540,38162,33.03
+85,Heggadadevankote,Mysore,Chikkamadu S,M,62,JD(S),ST,192784,148917,48606,32.64
+86,Hirekerur,Haveri,U. B. Banakar,M,53,KJP,GEN,162016,132997,52623,39.57
+87,Hiriyur,Chitradurga,Sudhakara D,M,52,INC,GEN,216172,160397,71661,44.68
+88,Holalkere,Chitradurga,H Anjaneya,M,58,INC,SC,204469,162979,76856,47.16
+89,Holenarasipur,Hassan,H.D.Revanna,M,55,JD(S),GEN,198333,162263,92713,57.14
+90,Honnali,Davangere,D G Shantana Gowda,M,65,INC,GEN,174516,149119,78789,52.84
+91,Hosadurga,Chitradurga,B.G.Govindappa,M,58,INC,GEN,175379,140003,58010,41.43
+92,Hosakote,Bangalore Rural,N.Nagaraju [M.T.B],M,61,INC,GEN,182905,166395,85238,51.23
+93,Hubli-Dharwad Central,Dharwad,Jagadish Shettar,M,57,BJP,GEN,212179,117311,58201,49.61
+94,Hubli-Dharwad East,Dharwad,Abbayya Prasad,M,44,INC,SC,174347,109094,42353,38.82
+95,Hubli-Dharwad West,Dharwad,Arvind Chandrakant Bellad,M,43,BJP,GEN,220564,126910,42003,33.1
+96,Hukkeri,Belgaum,Umesh Katti,M,52,BJP,GEN,175565,132961,81810,61.53
+97,Humnabad,Bidar,Rajshekar Baswaraj Patil,M,49,INC,GEN,206145,136013,64694,47.56
+98,Hungund,Bagalkot,Vijayanand Kashappanavar,M,41,INC,GEN,191972,137024,72720,53.07
+99,Hunsur,Mysore,H.P. Manjunath,M,45,INC,GEN,203627,161496,83930,51.97
+100,Indi,Bijapur,Yashavantharayagouda Patil,M,45,INC,GEN,200749,138775,58562,42.2
+101,Jagalur,Davangere,H.P.Rajesh,M,47,INC,ST,167330,132149,77805,58.88
+102,Jamkhandi,Bagalkot,Siddu B. Nyamagouda,M,63,INC,GEN,176718,131750,49145,37.3
+103,Jayanagar,B.B.M.P(South),B.N Vijaykumar,M,54,BJP,GEN,170907,95565,43990,46.03
+104,Jevargi,Gulbarga,Ajay Dharmsingh,M,39,INC,GEN,197259,144563,67038,46.37
+105,K.R.Pura,B.B.M.P(North),B.A. Basavaraja,M,48,INC,GEN,339784,200184,106299,53.1
+106,Kadur,Chikmagalur,Y.S.V.Datta,M,59,JD(S),GEN,182892,141538,68733,48.56
+107,Kagwad,Belgaum,Bharamgouda Alagouda Kage,M,55,BJP,GEN,164201,129200,41784,32.34
+108,Kalghatgi,Dharwad,Santhosh Lad,M,38,INC,GEN,168350,131588,76802,58.37
+109,Kampli,Bellary,T.H. Suresh Babu,M,30,BSRC,ST,182270,140277,70858,50.51
+110,Kanakagiri,Koppal,Shivaraj Sangappa Tangadagi,M,42,INC,SC,183620,135446,49451,36.51
+111,Kanakapura,Ramanagaram,D.K.Shivakumar,M,51,INC,GEN,210997,176151,100007,56.77
+112,Kapu,Udupi,Vinay Kumar Sorake,M,58,INC,GEN,155380,113861,52782,46.36
+113,Karkal,Udupi,V. Sunill Kumar,M,37,BJP,GEN,161008,130474,65039,49.85
+114,Karwar,Uttara Kannada,Santeesh Sail Krishna,M,45,IND,GEN,205831,145439,80727,55.51
+115,Khanapur,Belgaum,Arvind Chandrakant Patil,M,45,IND,GEN,185379,134890,37055,27.47
+116,Kittur,Belgaum,Inamdar Danappagouda Basanagouda,M,64,INC,GEN,166696,125970,53924,42.81
+117,Kolar,Kolar,R. Varthur Prakash,M,47,IND,GEN,196220,163480,62957,38.51
+118,Kolar Gold Field,Kolar,Ramakka. Y,F,59,BJP,SC,169610,117374,55014,46.87
+119,Kollegal,Chamarajnagar,S. Jayanna,M,61,INC,SC,191581,146477,47402,32.36
+120,Koppal,Koppal,Raghavendra K.Basavaraj Hitnal,M,34,INC,GEN,205255,151417,81062,53.54
+121,Koratagere,Tumkur,P.R.Sudhakarlal,M,48,JD(S),SC,181914,152242,72229,47.44
+122,Krishnaraja,Mysore,M K Somashekar,M,60,INC,GEN,216322,127812,52611,41.16
+123,Krishnarajanagara,Mysore,S R Mahesh,M,47,JD(S),GEN,188498,157467,81457,51.73
+124,Krishnarajpet,Mandya,Narayana Gowda,M,51,JD(S),GEN,189137,153482,56784,37
+125,Kudachi,Belgaum,P.Rajeev,M,35,BSRC,SC,147941,115375,71057,61.59
+126,Kudligi,Bellary,B.Nagendra,M,42,IND,ST,170516,132941,71477,53.77
+127,Kumta,Uttara Kannada,Sharada Mohan Shetty,F,51,INC,GEN,167620,124257,36756,29.58
+128,Kundapura,Udupi,Halady Srinivas Shetty,M,62,IND,GEN,181943,138983,80563,57.97
+129,Kundgol,Dharwad,Channabasappa Satyappa Shivalli,M,51,INC,GEN,168831,129517,52690,40.68
+130,Kunigal,Tumkur,D.Nagarajaiah,M,69,JD(S),GEN,170828,142545,44575,31.27
+131,Kushtagi,Koppal,Doddanagouda Hanamagouda Patil,M,44,BJP,GEN,193774,138246,44007,31.83
+132,Lingsugur,Raichur,Manappa D.Vajjal,M,52,JD(S),SC,197870,129580,31737,24.49
+133,Maddur,Mandya,D. C. Thammanna,M,70,JD(S),GEN,196781,156272,80926,51.79
+134,Madhugiri,Tumkur,Kyatasandra N. Rajanna,M,62,INC,GEN,182546,147308,75086,50.97
+135,Madikeri,Kodagu,Appachu Ranjan .M.P,M,56,BJP,GEN,202851,153856,56696,36.85
+136,Magadi,Ramanagaram,H.C.Balakrishna,M,48,JD(S),GEN,202991,170066,74821,44
+137,Mahadevapura,Bangalore Urban,Aravind Limbavali,M,46,BJP,SC,368393,226749,110244,48.62
+138,Mahalakshmi Layout,B.B.M.P(North),K. Gopalaiah,M,52,JD(S),GEN,245583,147849,66127,44.73
+139,Malavalli,Mandya,P.M.Narendra Swamy,M,50,INC,SC,230524,172550,61869,35.86
+140,Malleshwaram,B.B.M.P(North),Dr. Ashwathnarayan C. N,M,45,BJP,GEN,173755,108299,57609,53.19
+141,Malur,Kolar,K.S.Manjunathgowda,M,38,JD(S),GEN,163883,143121,57645,40.28
+142,Mandya,Mandya,M.H Ambareesh,M,61,INC,GEN,222941,152818,90329,59.11
+143,Mangalore,Dakshina Kannada,U.T. Khadar,M,43,INC,GEN,168319,124927,69450,55.59
+144,Mangalore City North,Dakshina Kannada,B.A.Mohiuddin Bava,M,49,INC,GEN,204413,145853,69897,47.92
+145,Mangalore City South,Dakshina Kannada,John Richard Lobo,M,60,INC,GEN,205065,132315,67829,51.26
+146,Manvi,Raichur,G.Hampayya,M,62,INC,ST,199508,121974,50619,41.5
+147,Maski,Raichur,Pratapgowda Patil,M,58,INC,ST,164884,105728,45552,43.08
+148,Mayakonda,Davangere,K Shivamurthy,M,57,INC,SC,174925,135030,32435,24.02
+149,Melukote,Mandya,K.S.Puttannaiah,M,63,SKP,GEN,191395,160892,80041,49.75
+150,Molakalmuru,Chitradurga,S. Thippeswamy,M,64,BSRC,ST,207158,164413,76827,46.73
+151,Moodabidri,Dakshina Kannada,K Abhayachandra,M,64,INC,GEN,173553,128808,53180,41.29
+152,Muddebihal,Bijapur,Appaji Urf Channabasavaraj Shankarao Nadagoud,M,55,INC,GEN,174207,114726,34747,30.29
+153,Mudhol,Bagalkot,Govind M Karjol,M,62,BJP,SC,166358,129099,64727,50.14
+154,Mudigere,Chikmagalur,B.B. Ningaiah,M,54,JD(S),SC,152759,110237,32417,29.41
+155,Mulbagal,Kolar,G. Manjunatha,M,34,IND,SC,171494,138700,73146,52.74
+156,Nagamangala,Mandya,N.Cheluvaraya Swamy,M,53,JD(S),GEN,200796,163624,89203,54.52
+157,Nagthan,Bijapur,Raju Alagur,M,52,INC,SC,225624,140024,45570,32.54
+158,Nanjangud,Mysore,V.Srinivasa Prasad,M,64,INC,SC,185095,141009,50784,36.01
+159,Narasimharaja,Mysore,Tanveer Sait,M,44,INC,GEN,211635,115764,38037,32.86
+160,Nargund,Gadag,B R Yavagal,M,66,INC,GEN,171702,128630,59620,46.35
+161,Navalgund,Dharwad,N H Konaraddi,M,49,JD(S),GEN,182898,137347,44448,32.36
+162,Nelamangala,Bangalore Rural,Dr K Srinivasamurthy,M,52,JD(S),SC,182233,139664,60492,43.31
+163,Nippani,Belgaum,Shashikala Annasaheb Jolle,F,43,BJP,GEN,189696,152690,81860,53.61
+164,Padmanaba Nagar,B.B.M.P(South),R. Ashoka,M,55,BJP,GEN,219754,128353,53680,41.82
+165,Pavagada,Tumkur,K.M.Thimmarayappa,M,55,JD(S),SC,186168,145380,68686,47.25
+166,Periyapatna,Mysore,K. Venkatesh,M,65,INC,GEN,162480,136307,62045,45.52
+167,Pulakeshinagar,B.B.M.P(North),R. Akhanda Srinivasa Murthy,M,43,JD(S),SC,178272,100501,48995,48.75
+168,Puttur,Dakshina Kannada,Shakunthala T. Shetty,F,66,INC,GEN,179600,142808,66345,46.46
+169,Raichur,Raichur,Dr. Shivaraj Patil S.,M,42,JD(S),GEN,184986,99286,45263,45.59
+170,Raichur Rural,Raichur,Thipparaja Hawaldar,M,36,BJP,ST,195582,134739,50497,37.48
+171,Rajaji Nagar,B.B.M.P(Central),S.Suresh Kumar,M,57,BJP,GEN,176249,107802,39291,36.45
+172,Rajarajeshwarinagar,B.B.M.P(Central),Munirathna,M,49,INC,GEN,334493,189998,71064,37.4
+173,Ramanagaram,Ramanagaram,H.D.Kumara Swamy,M,53,JD(S),GEN,184788,148705,83447,56.12
+174,Ramdurg,Belgaum,Ashok Mahadevappa Pattan,M,58,INC,GEN,172341,129132,42310,32.76
+175,Ranibennur,Haveri,Koliwad K.B,M,69,INC,GEN,200778,159167,53780,33.79
+176,Raybag,Belgaum,Aihole Duryodhan Mahalingappa,M,55,BJP,SC,162583,122106,37535,30.74
+177,Ron,Gadag,Gurupadagouda Sanganagouda Patil,M,65,INC,GEN,195737,145905,74593,51.12
+178,Sagar,Shimoga,Kagodu Thimmappa,M,82,INC,GEN,179790,137407,71960,52.37
+179,Sakaleshpur,Hassan,H. K. Kumaraswamy,M,58,JD(S),SC,181602,140486,63602,45.27
+180,Sandur,Bellary,E.Tukaram,M,46,INC,ST,171854,128384,62246,48.48
+181,Sarvagnanagar,B.B.M.P(North),Kelachandra Joseph George,M,63,INC,GEN,280041,140672,69673,49.53
+182,Saundatti Yellamma,Belgaum,Vishwanath Mamani,M,46,BJP,GEN,168709,133145,46434,34.87
+183,Sedam,Gulbarga,Dr. Sharan Prakash Rudrappa Patil,M,46,INC,GEN,185201,135976,53546,39.38
+184,Shahapur,Yadgir,Guru Patil Shiraval,M,43,KJP,GEN,188066,127118,54924,43.21
+185,Shanti Nagar,B.B.M.P(Central),N. A. Haris,M,46,INC,GEN,179461,103610,54342,52.45
+186,Shiggaon,Haveri,Basavaraj Bommai,M,53,BJP,GEN,188396,150102,73007,48.64
+187,Shikaripura,Shimoga,B. S. Yediyurappa,M,70,KJP,GEN,172735,138566,69126,49.89
+188,Shimoga,Shimoga,K.B.Prasanna Kumar,M,44,INC,GEN,215937,139648,39355,28.18
+189,Shimoga Rural,Shimoga,Sharada Pooryanaik,F,42,JD(S),SC,186016,143288,48639,33.94
+190,Shirahatti,Gadag,Doddamani Ramakrishna Shidlingappa,M,57,INC,SC,182763,131227,44738,34.09
+191,Shivajinagar,B.B.M.P(Central),R.Roshan Baig,M,59,INC,GEN,167309,90895,49649,54.62
+192,Shorapur,Yadgir,Raja Venkatappa Nayak,M,56,INC,ST,220310,146207,65033,44.48
+193,Shravanabelagola,Hassan,C.N.Balakrishna,M,44,JD(S),GEN,189541,155814,87185,55.95
+194,Shrirangapattana,Mandya,A.B. Ramesha Bandisiddegowda,M,47,JD(S),GEN,195314,157807,55204,34.98
+195,Sidlaghatta,Chikkaballapur,M.Rajanna,M,49,JD(S),GEN,176854,153740,77931,50.69
+196,Sindgi,Bijapur,Ramesh Balappa Bhusanur,M,54,BJP,GEN,184900,128355,37834,29.48
+197,Sindhanur,Raichur,Badarli Hampanagouda,M,63,INC,GEN,199977,145208,49213,33.89
+198,Sira,Tumkur,T B Jayachandra,M,64,INC,GEN,201521,159445,74089,46.47
+199,Sirsi,Uttara Kannada,Hegde Vishweshwar,M,52,BJP,GEN,174259,131191,42854,32.67
+200,Siruguppa,Bellary,B.M.Nagaraj,M,42,INC,ST,170038,126777,65490,51.66
+201,Sorab,Shimoga,S.Madhu Bangarappa,M,47,JD(S),GEN,172035,141159,58541,41.47
+202,Sringeri,Chikmagalur,D N Jeevaraj,M,50,BJP,GEN,150064,119957,58402,48.69
+203,Srinivaspur,Kolar,K.R. Ramesh Kumar,M,63,INC,GEN,190885,168875,83426,49.4
+204,Sullia,Dakshina Kannada,Angara.S,M,49,BJP,SC,180177,146066,65913,45.13
+205,T.Narasipur,Mysore,Dr H C Mahadevappa,M,60,INC,SC,179884,135293,53219,39.34
+206,Tarikere,Chikmagalur,G H Srinivasa,M,45,INC,GEN,159977,124727,35817,28.72
+207,Terdal,Bagalkot,Umashree,F,55,INC,GEN,192780,151562,70189,46.31
+208,Tiptur,Tumkur,K.Shadakshari,M,64,INC,GEN,171491,140253,56817,40.51
+209,Tirthahalli,Shimoga,Kimmane Ratnakar,M,61,INC,GEN,169863,139215,37160,26.69
+210,Tumkur City,Tumkur,Dr. Rafeeq Ahmed S.,M,45,INC,GEN,210384,138317,43681,31.58
+211,Tumkur Rural,Tumkur,B.Suresh Gowda,M,48,BJP,GEN,175369,146725,55029,37.5
+212,Turuvekere,Tumkur,M T Krishnappa,M,62,JD(S),GEN,176017,140074,66089,47.18
+213,Udupi,Udupi,Pramod Madhwaraj,M,45,INC,GEN,180879,138430,86868,62.75
+214,Varuna,Mysore,Siddaramaiah,M,64,INC,GEN,194915,160641,84385,52.53
+215,Vijay Nagar,B.B.M.P(South),M.Krishnappa,M,61,INC,GEN,235950,133197,76891,57.73
+216,Vijayanagara,Bellary,Anand Singh,M,47,BJP,GEN,171289,124713,69995,56.12
+217,Virajpet,Kodagu,K.G.Bopaiah,M,58,BJP,GEN,201277,142377,67250,47.23
+218,Yadgir,Yadgir,Dr. Maalakareddy,M,75,INC,GEN,190536,119778,40434,33.76
+219,Yelahanka,Bangalore Urban,S R Vishwanath,M,50,BJP,GEN,293238,196147,75507,38.5
+220,Yelburga,Koppal,Basavaraj Rayaraddy,M,57,INC,GEN,180009,136729,52388,38.32
+221,Yellapur,Uttara Kannada,Arbail Hebbar Shivaram,M,55,INC,GEN,151753,120745,58025,48.06
+222,Yemkanmardi,Belgaum,Satish Laxmanarao Jarakiholi,M,50,INC,ST,162258,124560,70726,56.78
+223,Yeshvanthapura,Bangalore Urban,S.T. Somashekar,M,55,INC,GEN,349639,231515,120380,52
