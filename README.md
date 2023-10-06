@@ -73,5 +73,5 @@ This analysis dives deep into the Karnataka Assembly Elections, exploring facets
 
 ## Links
 
-- [Project website](karnataka-election-analysis.streamlit.app)
-- [LinkedIn](linkedin.com/in/joshiaditya0511)
+- [Project website](https://karnataka-election-analysis.streamlit.app/)
+- [LinkedIn](https://www.linkedin.com/in/joshiaditya0511)
