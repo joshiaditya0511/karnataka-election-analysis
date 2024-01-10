@@ -1206,31 +1206,35 @@ def vote_margin_map():
     st.header('Heatmap of Vote margins')
 
     df = get_vote_margin_data()
+    df.year = df.year.astype(str)
     if not isinstance(df, pd.DataFrame):
         st.error("An error occurred when retrieving data.")
         return
-
-    global acmap
-    geojson = acmap
 
     # if isinstance(df, pd.DataFrame):
 
     options = sorted(df.year.unique())
 
     # Let the user select a year
-    selected_year = st.radio('Select a Year:', options, horizontal=True)
+    
     col1, col2 = st.columns([1,2])
 
     # User selection of constituency
     with col1:
-        selected_constituency = st.selectbox('Select a constituency', ['All'] + sorted(list(df['constituency'].unique())))
-        selected_party = st.selectbox('Select a party', ['All'] + sorted(list(df.loc[df.year==selected_year,'winning party'].unique())))
+        selected_year = st.radio('Select a Year:', options, horizontal=True)
+    with col2:
+        ncol1, ncol2 = st.columns(2)
+        with ncol1:
+            selected_constituency = st.selectbox('Select a constituency', ['All'] + sorted(list(df['constituency'].unique())))
+        with ncol2:
+            selected_party = st.selectbox('Select a party', ['All'] + sorted(list(df.loc[df.year==selected_year,'winning party'].unique())))
 
 
     party_opacity = const_opacity = opacity = 1
     show_attr = 'Both'
     if selected_party!='All' and selected_constituency != 'All':
         st.warning('Please choose only one of the either.')
+        party_opacity = const_opacity = 0
     if selected_constituency=='All' and selected_party!='All':
         const_opacity = 0
         opacity = 0.1
@@ -1272,13 +1276,11 @@ def vote_margin_map():
 
 <div>""",unsafe_allow_html=True)
 
-
-    df['selected_const'] = df['constituency'] == selected_constituency
-    df['selected_party'] = df['winning party'] == selected_party
-
-
     @st.cache_data
-    def show_year(df,color_attribute):
+    def show_year(df,color_attribute,selected_year,selected_party,selected_constituency,party_opacity,const_opacity,opacity):
+
+        global acmap
+        geojson = acmap
 
         base = px.choropleth_mapbox(
             df.loc[(df.year==selected_year)],
@@ -1315,7 +1317,7 @@ def vote_margin_map():
             # color_continuous_scale="turbo",
             color_discrete_sequence=['red'],
             labels={'winning party': 'Winning Party'},
-            hover_data=['name', 'constituency', 'margin', 'winning party'],  # Add the hover data
+            hover_data=['name', 'constituency', 'winning party', 'margin'],  # Add the hover data
             zoom=7,
             opacity=const_opacity
         )
@@ -1351,12 +1353,12 @@ def vote_margin_map():
         fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
         fig.update_layout(height=700) # width=800,
         return fig
-
+    
     img1, img2 = st.columns(2)
     with img1:
-        st.plotly_chart(show_year(df,'margin'),use_container_width=True)
+        st.plotly_chart(show_year(df,'margin',selected_year,selected_party,selected_constituency,party_opacity,const_opacity,opacity),use_container_width=True)
     with img2:
-        st.plotly_chart(show_year(df,'margin percent'),use_container_width=True)
+        st.plotly_chart(show_year(df,'margin percent',selected_year,selected_party,selected_constituency,party_opacity,const_opacity,opacity),use_container_width=True)
 
     # top_5_highest_margin = df.groupby('year').apply(lambda x: x.nlargest(5, 'margin')).reset_index(drop=True)
     # top_5_lowest_margin = df.groupby('year').apply(lambda x: x.nsmallest(5, 'margin')).reset_index(drop=True)
@@ -1386,6 +1388,11 @@ def vote_margin_map():
 # - While in other constituencies, the winning party changed this year copmared to previous years. For example, we can see that Arabhavi was a stronghold for BJP in both 2013 and 2018. But, in 2023 the situation changed drastically and Congress (INC) came in power, that too with a high margin! The scenario is completely reversed in Anekal constituency. To determine what might be the reasons behind this, further analysis is required. (Coming Soon...)
 # - In some constituencies like Davanagere North and Pulakeshinagar, the voter preferences have shifted each term. Hence, both of them have different winning parties in each election.
 # """)
+
+
+############################################################################################################################################
+############################################################ NEW FUNCTION ##################################################################
+############################################################################################################################################
 
 
 ############################################################################################################################################
