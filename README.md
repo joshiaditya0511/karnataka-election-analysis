@@ -1,77 +1,73 @@
 # Karnataka Assembly Elections: Data Analysis
 
-This project is a comprehensive data analysis of the Karnataka Assembly Elections. It offers insights and visualizations on various aspects of the election, leveraging data from multiple sources.
+This project provides a comprehensive analysis of the Karnataka Assembly Elections. Through various insights and visualizations, it examines multiple facets of the elections using data from multiple sources. Explore the findings directly on the [website](https://kea.adityajoshi.in).
 
 ## Contents
+- [Links](#links)
 - [Project Overview](#project-overview)
 - [Tools and Tech Used](#tools-and-tech-used)
 - [Sources and References](#sources-and-references)
-- [Links](#links)
+- [Change Log](#change-log)
+
+## Links
+
+- [Project Website](https://kea.adityajoshi.in)
+- [LinkedIn](https://www.linkedin.com/in/joshiaditya0511)
+- [Personal Website](https://adityajoshi.in)
 
 ## Project Overview
 
-This analysis dives deep into the Karnataka Assembly Elections, exploring facets like vote count, candidate details, vote margins, impact of Bharat Jodo Yatra and more. All visualizations are interactive, offering users an engaging experience.
+This analysis dives deep into the Karnataka Assembly Elections, exploring elements such as vote counts, candidate details, vote margins, and the impact of events like the Bharat Jodo Yatra. All visualizations are interactive to provide an engaging and informative user experience.
 
 ## Tools and Tech Used
 
 ### Data Gathering:
 
-- **Webscraping**: 
-  - `Requests`: Utilized for sending GET requests to retrieve webpage content.
-  - `BeautifulSoup`: Employed for parsing HTML and extracting relevant data.
-  - `Selenium`: Facilitated interaction with dynamically loaded pages, ensuring faster loading and maintaining cookies for improved data fetches.
-  - `asyncio`: Enhanced performance by sending multiple requests asynchronously, ensuring efficient run times and adhering to rate limits.
-  
+- **Web Scraping**:
+  - `Requests`: Sent GET requests to retrieve webpage content.
+  - `BeautifulSoup`: Parsed HTML for relevant data extraction.
+  - `Selenium`: Interacted with dynamic pages, ensuring smoother data fetching.
+  - `asyncio`: Enhanced performance with asynchronous requests for efficient data retrieval.
+
 - **PDF Extraction**:
-  - Over 57,000 PDFs were processed to extract voter data for the 2023 elections.
-  - `PyPDF2`: Modified PDFs, retaining only vital pages.
-  - `pdf2image`: Transformed PDF pages into image formats.
-  - `OpenCV`: Detected and retained table borders for precise data extraction.
-  - `TesseractOCR`: Employed OCR for data extraction within detected table areas.
-  - `asyncio` and `multiprocessing`: Used for asynchronous downloads and simultaneous processing of multiple PDFs.
+  - Processed over 57,000 PDFs to extract voter data for the 2023 elections.
+  - `PyPDF2`: Processed PDFs, retaining only essential pages.
+  - `pdf2image`: Converted PDF pages to images.
+  - `OpenCV`: Detected table borders for precise data extraction.
+  - `TesseractOCR`: Extracted text data within table areas.
+  - `asyncio` and `multiprocessing`: Enabled asynchronous downloads and parallel processing of PDFs.
 
 ### Data Wrangling:
 
-- `Pandas` and `Regular Expressions`: These tools formed the backbone of data cleaning and wrangling operations.
-- `OpenAI API`: Leveraged for segmenting and classifying education and profession details using the GPT-3.5 model, with data managed in chunks to adhere to token and rate limits.
+- `Pandas` and `Regular Expressions`: Key tools for data cleaning and organization.
+- `OpenAI API`: Used GPT-3.5 for segmenting and categorizing education and profession data from candidate details.
 
 ### Data Visualization:
 
-- `Plotly Express`: The primary library used for crafting interactive visualizations.
-- `Flourish Studio`: Used to create and embed Parliamentary Chart as an HTML component.
-
-### Database:
-
-- `MySQL` in `AWS RDS`: The chosen DBMS for storage and retrieval, leveraging the free tier of AWS RDS.
-- `MySQL's Python Connector API`: Facilitated database interactions, from table creation to data fetching, bridging the website and the database.
+- `Plotly`: Main library for crafting interactive visualizations.
+- `Flourish Studio`: Created and embedded the Parliamentary Chart as an HTML component.
 
 ### Website and Deployment:
 
-- `Streamlit`: The foundational framework for website creation, hosted on Streamlit's complimentary community cloud.
+- **Frontend**: Built using `HTML`, `Bootstrap`, and `JavaScript` to create a **static** and **responsive** site.
+- **Hosting**: Deployed on an `AWS EC2` instance using the free tier, with `NGINX` configured as the web server for efficient delivery.
 
 ### Miscellaneous:
 
-- `MapShaper`: Assisted in converting Karnataka’s assembly boundaries shape file to GeoJSON and smoothening boundaries for faster rendering.
+- `MapShaper`: Converted Karnataka's assembly boundaries shapefile to GeoJSON and optimized boundaries for faster rendering.
 
 ## Sources and References
 
-- **MyNeta**: Data concerning assets, liabilities, criminal cases, profession, and education of candidates across three assembly elections was scraped from MyNeta. This data was freely available to the general public.
+- **[MyNeta](https://www.myneta.info/)**: Data on candidate assets, liabilities, criminal cases, profession, and education.
+- **[NDTV](https://www.ndtv.com/)**: Vote counts for all candidates in the 2023 elections.
+- **[OpenCity](https://opencity.in/)**: Detailed results from the 2013 Assembly elections.
+- **[ECI (Election Commission of India)](https://eci.gov.in/)**: Detailed results from the 2018 elections.
+- **[CEO (Chief Election Officer) of Karnataka](https://ceo.karnataka.gov.in/en)**: Gender distribution data on eligible voters, provided in PDFs.
+- **[KGIS (Karnataka Geographic Information System)](https://kgis.ksrsac.in/kgis/)**: Shapefile for assembly constituency boundaries.
+- **[MapShaper](https://mapshaper.org/)**: Shapefile conversion to GeoJSON, smoothing boundaries for visualization.
+- **[OpenAI](https://openai.com/)**: Used for segmenting and classifying candidate details on education and profession.
 
-- **NDTV**: Vote count data for every candidate contesting in the 2023 elections was scraped from NDTV's live election results page. This data was also freely available to the public.
+## Change Log
 
-- **OpenCity**: Detailed results for the 2013 Assembly elections were freely available on OpenCity in the form of a CSV file.
-
-- **ECI (Election Commission of India)**: The Election Commission of India published the detailed results of the 2018 elections in September 2018. This data was freely accessible to the public.
-
-- **CEO (Chief Election Officer) of Karnataka**: Information about eligible voters and their gender-wise distribution was available in PDF format for all polling stations in Karnataka. Although these PDFs were free for the public, they were protected by a captcha. Only data regarding the number of eligible voters and their gender distribution was retrieved.
-
-- **KGIS (Karnataka Geographic Information System)**: The shape file for Karnataka's assembly constituency boundaries was obtained from the KGIS website owned by the Karnataka government. For visualization purposes, Bangalore district’s constituencies have been extracted and displayed separately due to their high number and smaller area. No harm or alteration to Karnataka's sovereign boundaries is intended.
-
-- **MapShaper**: MapShaper was used to convert the Shape file to GeoJSON for better compatibility. The tool also smoothened the borders for quicker visualization rendering in this project. Again, no harm or alteration to Karnataka's sovereign boundaries is intended.
-
-- **OpenAI**: OpenAI's API was employed to segment and classify the education and profession details provided by the candidates. This segmentation was done using OpenAI’s proprietary GPT-3.5 model, and while efficient, it may not be entirely accurate.
-
-## Links
-
-- [Project website](https://karnataka-election-analysis.streamlit.app/)
-- [LinkedIn](https://www.linkedin.com/in/joshiaditya0511)
+- **Transition to a Static Site**: The project originally utilized a dynamic backend with a MySQL database and Streamlit for visualizations. However, due to the stationary nature of the data (i.e., it will not change over time), the database backend was removed. This allowed the project to move to a static site, reducing backend load and enhancing performance.
+- **Deployment Update**: The Streamlit-hosted site was replaced with a static site built with HTML, Bootstrap, and JavaScript, hosted on a free-tier AWS EC2 instance using NGINX. This change improves site speed and responsiveness while providing a smoother user experience.

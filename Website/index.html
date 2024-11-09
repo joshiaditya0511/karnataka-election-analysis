@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karnataka Elections Analysis</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+  <!-- Notification Strip -->
+  <div id="notification-strip" class="notification-strip">
+    <p>This site is best viewed on large screens (laptop/PC).</p>
+    <button id="close-notification" class="close-notification-btn">&times;</button>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <!-- Info Button -->
+      <a href="#about" class="btn btn-info-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+        </svg>
+      </a>
+
+      <!-- Center Title -->
+      <div class="mx-auto page-title">
+        Karnataka Elections Analysis
+      </div>
+
+      <!-- Sidebar Toggle Button -->
+      <button id="sidebarCollapse" class="btn btn-toggle-sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20"><path fill="black" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Collapsible Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button id="closeSidebar" class="btn btn-close-sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" height="20" width="20"><path fill="black" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+    </button>
+    <!-- Sidebar Content (e.g., Table of Contents) -->
+    <h4>Table of Contents</h4>
+    <div id="table-of-contents"></div>
+    <!-- Add sidebar content here -->
+  </div>
+  <!-- Main Content -->
+<div class="container content">
+
+    <section id="parliamentary-chart">
+      <div class="flourish-embed flourish-parliament" data-src="visualisation/19816923">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript>
+          <img src="https://public.flourish.studio/visualisation/19816923/thumbnail" width="100%" alt="parliament visualization" />
+        </noscript>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 1 -->
+    <section>
+      <h2 class="section-heading" id="karnataka-electoral-history">Karnataka's Electoral History</h2>
+
+      <p class="section-intro">Karnataka's recent state assembly elections reveal shifting political patterns over the past decade. The results from 2013, 2018, and 2023 trace a path from decisive outcomes to nuanced shifts in vote share and constituency wins — reflecting how electoral dynamics evolve over time.</p>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="keh_voteshare" class="plotly-chart"></div>
+          </div>
+          <div class="image-container">
+            <div id="keh_constwon" class="plotly-chart"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3 class="subsection-heading" id="2013-the-year-of-decisive-outcomes">2013: The Year of Decisive Outcomes</h3>
+          <ul>
+            <li>
+              <b>Indian National Congress (INC):</b> Achieved a clear majority by securing the highest number of constituencies.
+            </li>
+            <li>
+              <b>Bharatiya Janata Party (BJP) & Janata Dal (Secular) [JD(S)]:</b> Both parties lagged behind the INC, ending up with an equal and significantly lower count of seats compared to the frontrunner.
+            </li>
+            <li>
+              Overall, the data indicates a strong consolidation of votes in favor of the INC, leading to their majority in the assembly.
+            </li>
+          </ul>
+          <h3 class="subsection-heading" id="2018-a-shift-in-popular-vote-dynamics">2018: A Shift in Popular Vote Dynamics</h3>
+          <ul>
+            <li>
+              The <b>BJP</b> emerged as the winner, gaining a substantial increase in constituencies won and surpassing the INC by a notable margin.
+            </li>
+            <li>
+              <b>INC</b> a consistent vote share compared to 2013 but experienced a decrease in the number of constituencies won.
+            </li>
+            <li>
+              <b>Popularity vs. Preference:</b> Despite losing the election, the INC actually led in the popular vote, meaning it had a marginally higher total vote share percentage compared to the BJP, suggesting close contests in several areas.
+            </li>
+          </ul>
+          <h3 class="subsection-heading" id="2023-a-surge-in-constituencies-won">2023: A Surge in Constituencies Won</h3>
+          <ul>
+            <li>
+              The <b>INC</b> not only led in the popular vote but also secured significantly more constituencies than the BJP, winning over twice as many seats as the BJP, despite only a 6.2 percentage point lead in vote share.
+            </li>
+            <li>
+              <b>BJP</b> Maintained a relatively stable vote share from the previous election but faced a sharp decline in the number of constituencies won.
+            </li>
+            <li>
+              <i>Insight:</i> The disproportionate increase in constituencies for the INC, relative to their vote share margin, points towards effective vote distribution and success in key constituencies.
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Subsection 1.2 -->
+      <!-- <h3 class="subsection-heading">Subsection 1.2 Title</h3>
+      <div class="row align-items-center mb-4 flex-row-reverse">
+        <div class="col-md-6">
+          <div class="image-container">
+            <div id="plot2"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p>This is another paragraph explaining the image or any content you want to include here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div> -->
+  
+      <!-- Section Divider -->
+
+    </section>
+
+    <hr class="section-divider">
+
+    <section>
+      <h2 class="section-heading" id="impact-of-the-bharat-jodo-yatra">Impact of the Bharat Jodo Yatra</h2>
+      <!-- <p class="section-intro">The Bharat Jodo Yatra (BJY), led by Rahul Gandhi and the Congress Party, covered 21 assembly constituencies in Karnataka. The Yatra spanned 511km in Karnataka over 22 days, moving from Gundlupet constituency to Raichur Rural constituency.</p> -->
+      <div class="accordion" id="BJYaccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              What's the Bharat Jodo Yatra (BJY)?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#BJYaccordion">
+            <div class="accordion-body">
+              <p style="text-align: justify;">
+                Bharat Jodo Yatra was a mass movement which was held by the political party Indian National Congress ("the Congress" or INC as short form). Senior Congress leader Rahul Gandhi was orchestrating the movement by encouraging the party cadre and the public to walk from Kanyakumari at the southern tip of India to the union territory of Jammu and Kashmir, a journey of 4,080 kilometres (2,540 miles) over almost 150 days.
+              </p>
+              <p style="text-align: justify;">
+                According to INC, the movement was intended to unite the country against the "divisive politics" of the Bharatiya Janata Party (BJP)-led Government of India. The Bharat Jodo Yatra movement was launched by Rahul Gandhi and Tamil Nadu chief minister M. K. Stalin; on September 7, 2022.
+              </p>
+              <p style="text-align: justify;">
+                <b>The Yatra covered 21 assembly constituencies in Karnataka.</b> It spanned 511km in Karnataka over 22 days, moving from Gundlupet constituency to Raichur Rural constituency.
+              </p>
+              <p style="text-align: right;">
+                Source: <a href="https://en.wikipedia.org/wiki/Bharat_Jodo_Yatra" target="_blank"><u><b>Wikipedia</b></u></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="BJYmap2018" class="plotly-chart"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="BJYmap2023" class="plotly-chart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4">
+        <h3 class="subsection-heading" id="bharat-jodo-yatra-analysis">Bharat Jodo Yatra Analysis</h3>
+        <div class="col-md-5">
+          <p>
+            The Bharat Jodo Yatra (BJY), led by Rahul Gandhi and the Congress Party, covered 21 assembly constituencies in Karnataka. The Yatra spanned 511km in Karnataka over 22 days, moving from Gundlupet constituency to Raichur Rural constituency.
+            <br><br>
+            The map shows that the Yatra went through constituencies that the INC didn't win much in 2018. Out of 21 constituencies, the INC won in only 5, while the BJP won in 12 and the JD(S) in 4. But in 2023, things changed. The INC won in 15 of these constituencies and joined forces with SKP in Melukote, making their total 16.
+          </p>
+        </div>
+        <div class="col-md-7">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="BJYconstshare" class="plotly-chart"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4">
+        <div class="col-md-7">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="BJYvoteshare" class="plotly-chart"></div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <p>
+            If we look at the charts, we see that constituencies visited by the BJY had almost the same vote share as other constituencies. This may imply that the Yatra wasn't all that beneficial for INC. But if we compare this to the last election, there's a big change. The vote share in constituencies visited by BJY went up a lot (by about 9.78%) from 2018 to 2023. In other constituencies, it went up too, but only by about 5.80%.
+            <br><br>
+            So, what does this mean? It looks like the Bharat Jodo Yatra made a difference. It seems to have helped the INC do better in the places it visited, especially since they didn't do well there in 2018.
+            <br><br>
+            While the Yatra is seen as a factor in the improved performance, it's essential to note that correlation doesn't imply causation, and other factors might have contributed to the results.
+          </p>
+        </div>
+      </div>    
+    </section>
+    
+    <hr class="section-divider">
+
+    <section>
+      <h2 class="section-heading" id="emerging-bipolarity-in-karnataka">Emerging Bi-polarity in Karnataka</h2>
+      <div class="row align-items-center mb-4">
+        <h3 class="subsection-heading" id="the-power-shift-national-vs-regional-parties">The Power Shift: National vs. Regional Parties</h3>
+        <div class="col-md-6">
+          <p>
+            Over the past three assembly elections, there's been a noticeable shift in the political landscape. The data reveals a continuous rise in the combined vote share of the two leading national parties, BJP and INC. As depicted in the graph, their collective vote share has consistently increased over the years.
+            <br><br>
+            But what does this mean for regional parties and their candidates?
+            <br><br>
+            As the national parties grow stronger, regional parties are facing a decline in their vote share. This trend might raise questions for voters who support local parties. If the trajectory continues, will their preferred regional party have the influence and representation they once had?
+            <br><br>
+            Moreover, candidates from these regional parties might find themselves at a crossroads. A dwindling vote share could mean reduced chances of electoral success, prompting them to reconsider their affiliations.
+            <br><br>
+            In essence, the rising dominance of national parties could reshape the political fabric, nudging voters and candidates to reevaluate their loyalties. As we move forward, it will be intriguing to see how this dynamic evolves and impacts the broader political spectrum.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="votesharetoptwoparties" class="plotly-chart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4">
+        <h3 class="subsection-heading" id="effective-number-of-parties-enp">Effective Number of Parties (ENP)</h3>
+        <div class="col-md-6">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="enop" class="plotly-chart"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p>
+            The concept of the Effective Number of Parties (ENP) is used to measure the number of "effective" parties in a political system. It's not just a count of total parties; rather, it's a weighted measure that takes into consideration the relative strength of each party.
+          </p>
+          <div class="accordion" id="ENOPaccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  How is ENOP calculated?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#ENOPaccordion">
+                <div class="accordion-body">
+
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" style="font-size: 1.5rem;">
+                        <mrow>
+                          <mi>ENP</mi>
+                          <mo>=</mo>
+                          <munderover>
+                            <mo>&#x2211;</mo>
+                            <mrow>
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mi>n</mi>
+                          </munderover>
+                          <mfrac>
+                            <mn>1</mn>
+                            <mrow>
+                              <mn>1</mn>
+                              <mo>+</mo>
+                              <mfrac>
+                                <msup>
+                                  <msub>
+                                    <mi>p</mi>
+                                    <mi>L</mi>
+                                  </msub>
+                                  <mn>2</mn>
+                                </msup>
+                                <msub>
+                                  <mi>p</mi>
+                                  <mi>i</mi>
+                                </msub>
+                              </mfrac>
+                              <mo>&#x2212;</mo>
+                              <msub>
+                                <mi>p</mi>
+                                <mi>i</mi>
+                              </msub>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                      </math>
+                    
+                      <p>Where:</p>
+                      <ul>
+                        <li>
+                          <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <msub><mi>p</mi><mi>L</mi></msub>
+                          </math>
+                          is the largest party's proportion of all votes or seats;
+                        </li>
+                        <li>
+                          <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <msub><mi>p</mi><mi>i</mi></msub>
+                          </math>
+                          is each party's proportion of votes or seats;
+                        </li>
+                        <li>
+                          <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>n</mi>
+                          </math>
+                          is the total number of parties with at least 1 vote or seat.
+                        </li>
+                      </ul>
+                
+                  <p style="text-align: right;">
+                    Source: <a href="https://en.wikipedia.org/wiki/Effective_number_of_parties" target="_blank"><u><b>Wikipedia</b></u></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+            In a two-party system, the ENP will be close to 2, while in a system with many small parties, the ENP will be much higher. <br>
+            The idea of dwindling regional parties and the emergence of a bi-polarity in the political landscape is bolstered by this metric. A decreasing ENP over time would suggest a consolidation towards fewer dominant parties.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- About Section -->
+    <section class="about-section">
+      <h2 id="about" class="section-heading">About This Project</h2>
+
+      <!-- Introduction -->
+      <p class="section-intro">
+        Welcome to my analysis of the Karnataka Assembly Elections. This project dives into various aspects of the election using data to uncover patterns and insights.
+      </p>
+
+      <p class="section-intro">
+        <strong>Disclaimer:</strong> I am not affiliated with any political party. All insights presented here are based on data, with some conclusions drawn using basic common sense and analytical perspective. I am a data analyst, not a political scientist.
+      </p>
+
+      <p class="section-intro">
+        <strong>Note:</strong> To view the code for this project and explore the tools and technologies I used, visit my GitHub repository: 
+        <a href="https://github.com/joshiaditya0511/karnataka-election-analysis" target="_blank">GitHub Repository</a>.
+      </p>
+
+      <!-- Using This Site Section -->
+      <div class="about-content">
+        <h3 id="using-this-site" class="subsection-heading">Using This Site</h3>
+
+        <h4 class="sub-subsection-heading">Best Viewing Experience</h4>
+        <p>For the best experience, please view this site on a desktop or laptop browser. While it is accessible on mobile devices, it’s not fully optimized for them. If you’re using a mobile phone, consider selecting the "Desktop Site" option in your browser and viewing in landscape mode.</p>
+
+        <h4 class="sub-subsection-heading">Interactive Charts</h4>
+        <p>All charts, maps, and graphs on this site are interactive. Hover or Click on elements within the visualizations to explore further.</p>
+
+        <h4 class="sub-subsection-heading">Table of Contents</h4>
+        <p>Access the table of contents by clicking on the menu icon at the top right corner. This will help you navigate through different sections of the analysis with ease.</p>
+      </div>
+
+      <!-- Data Notes and Discrepancies Section -->
+      <div class="about-content">
+        <h3 id="data-notes-and-discrepancies" class="subsection-heading">Data Notes and Discrepancies</h3>
+
+        <h4 class="sub-subsection-heading">Votes Data</h4>
+        <p>While the data from the 2013 and 2018 elections is valid, there are some discrepancies to note. The 2013 data does not account for any bye-elections held between 2013 and 2018. The 2018 data includes the results from bye-elections conducted in 2019 for 15 constituencies. Any bye-elections held after 2019 are not reflected here. Data for the 2023 elections is sourced from NDTV’s publicly available data, not from the Election Commission of India’s official records.</p>
+      </div>
+
+      <!-- Sources and References Section -->
+      <div class="about-content">
+        <h3 id="sources-and-references" class="subsection-heading">Sources and References</h3>
+
+        <h4 class="sub-subsection-heading"><a href="https://www.myneta.info/" target="_blank">MyNeta</a></h4>
+        <p>Data on candidates' assets, liabilities, criminal cases, professions, and education across three elections was scraped from MyNeta. This data is freely available to the public.</p>
+
+        <h4 class="sub-subsection-heading"><a href="https://www.ndtv.com/" target="_blank">NDTV</a></h4>
+        <p>Vote count data for each candidate in the 2023 elections was scraped from NDTV's live election results page, which is also freely accessible to the public.</p>
+
+        <h4 class="sub-subsection-heading"><a href="https://opencity.in/" target="_blank">OpenCity</a></h4>
+        <p>Detailed results for the 2013 Assembly elections were obtained from OpenCity in CSV format, freely available for public use.</p>
+
+        <h4 class="sub-subsection-heading"><a href="https://eci.gov.in/" target="_blank">ECI (Election Commission of India)</a></h4>
+        <p>The Election Commission of India published detailed results for the 2018 elections in September 2018. This information is freely accessible to the public.</p>
+
+        <h4 class="sub-subsection-heading"><a href="https://ceo.karnataka.gov.in/en" target="_blank">CEO (Chief Election Officer) of Karnataka</a></h4>
+        <p>Information on eligible voters and their gender distribution was available in PDFs for all polling stations in Karnataka. Though freely available, these PDFs were protected by captcha. Only data on eligible voters and gender distribution was extracted.</p>
+
+        <h4 class="sub-subsection-heading"><a href="https://kgis.ksrsac.in/kgis/" target="_blank">KGIS (Karnataka Geographic Information System)</a></h4>
+        <p>The Karnataka constituency boundary shapefiles were obtained from the KGIS website. For clarity, Bangalore district constituencies are displayed separately due to their number and smaller area. No alteration to Karnataka’s official boundaries is intended.</p>
+
+        <h4 class="sub-subsection-heading"><a href="https://mapshaper.org/" target="_blank">MapShaper</a></h4>
+        <p>MapShaper was used to convert shapefiles to GeoJSON for better compatibility. The tool also helped smoothen boundaries for faster rendering, without altering Karnataka’s official boundaries.</p>
+
+        <h4 class="sub-subsection-heading"><a href="https://openai.com/" target="_blank">OpenAI</a></h4>
+        <p>OpenAI's API assisted in segmenting and categorizing candidates' education and profession details using the GPT-3.5 model. While effective, this segmentation may not be entirely accurate.</p>
+
+        <!-- Note at the End of Sources and References -->
+        <p class="section-note">
+          <b>Note:</b> All data extracted or scraped is strictly for educational and academic purposes.
+        </p>
+      </div>
+
+      <!-- What I Plan to Add Section -->
+      <div class="about-content">
+        <h3 id="what-i-plan-to-add-to-this-project-if-when-i-get-the-time" class="subsection-heading">What I Plan to Add to This Project (If/When I Get the Time)</h3>
+        <ul class="planned-features-list">
+          <li><strong>Vote Margins Analysis:</strong> Analyze close contests to see where minor shifts in vote margins could impact outcomes, identifying constituencies with consistent or volatile margin patterns.</li>
+          <li><strong>Investigating the NOTA Option:</strong> Compare NOTA (None of the Above) votes across years, exploring constituencies with high NOTA vote shares and their potential implications.</li>
+          <li><strong>Candidate/Winner Background:</strong> Examine the educational, criminal, and financial backgrounds of candidates and winners, and identify major shifts or highlights in these backgrounds over different election years.</li>
+          <li><strong>Finding Patterns Using Machine Learning:</strong> Leverage machine learning models to uncover patterns across voter demographics, candidate profiles, and election results, providing deeper insights into underlying trends.</li>
+        </ul>
+      </div>
+
+      <!-- What I Would Have Liked to Add Section -->
+      <div class="about-content">
+        <h3 id="what-i-would-have-liked-to-add-to-this-project" class="subsection-heading">What I Would Have Liked to Add to This Project</h3>
+        <ul class="planned-features-list">
+          <li><strong>Party Constituency Cluster Analysis:</strong> Explore geographic clusters of constituencies voting for the same party, uncovering any spatial patterns in party popularity.</li>
+          <li><strong>Swing Constituency Analysis:</strong> Identify constituencies with fluctuating party preferences, providing insights into areas with unpredictable voting patterns.</li>
+          <li><strong>Investigating the NOTA Option:</strong> A deeper dive into NOTA votes to understand where and why voters might choose this option in significant numbers.</li>
+          <li><strong>Integrating Census Data for More Depth:</strong> Adding more layers of analysis using census data on aspects like: <br>
+            <ul>
+              <li>Average family income levels and economic demographics</li>
+              <li>Population aggregates by caste, religion, age groups, and gender</li>
+              <li>Educational attainment levels across different demographics</li>
+              <li>Employment and occupation types across regions</li>
+              <li>Urban versus rural migration patterns and density</li>
+            </ul>
+            <p>However, the 2011 census data is outdated, as factors like migration, urbanization, and constituency changes have significantly altered demographics, making it less reliable for this analysis.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Get in Touch Section -->
+      <div class="about-content">
+        <h3 id="get-in-touch" class="subsection-heading">Get in Touch</h3>
+        <p class="section-intro">If you have any questions, suggestions, or feedback, feel free to connect with me on:</p>
+        <ul class="planned-features-list">
+          <li>
+            <a href="https://adityajoshi.in" target="_blank"> Personal Website</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/joshiaditya0511" target="_blank"> LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+
+  </div>
+  
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/plotly-2.35.2.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

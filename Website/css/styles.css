@@ -1,0 +1,314 @@
+/* Global Styles */
+body {
+    font-family: 'Lora', serif;
+    background-color: #f8f8f8; /* Soft white background */
+    color: rgb(19, 19, 20); /* Default text color */
+    margin: 0;
+    padding: 0;
+  }
+
+/* Notification Strip Styles */
+.notification-strip {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f8d7da; /* Soft red background */
+  color: #721c24; /* Dark red text */
+  padding: 10px 50px 10px 10px;
+  text-align: center;
+  z-index: 1060; /* Higher than navbar and sidebar */
+}
+
+.notification-strip p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.close-notification-btn {
+  position: absolute;
+  right: 10px;
+  top: -8px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #721c24;
+  cursor: pointer;
+}
+
+.close-notification-btn:hover {
+  color: #f5c6cb;
+}
+
+/* When Notification is Visible */
+body.notification-visible .navbar {
+  top: 50px; /* Height of the notification strip */
+}
+
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    /* Adjustments for notification strip */
+    top: 0;
+    transition: top 0.3s ease-in-out;
+    z-index: 1050;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    flex-grow: 1;
+    color: rgb(19, 19, 20);
+  }
+  
+  /* Info Button */
+  .btn-info-icon {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(19, 19, 20);
+    padding: 0.5rem;
+  }
+  
+  .btn-info-icon:hover {
+    color: rgb(100, 100, 100);
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 325px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1050;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Sidebar Active (Visible) */
+  .sidebar-active {
+    transform: translateX(0);
+  }
+  
+  /* Close Sidebar Button */
+  .btn-close-sidebar {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: rgb(19, 19, 20);
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  
+  .btn-close-sidebar:hover {
+    color: rgb(100, 100, 100);
+  }
+  
+  /* Sidebar Toggle Button */
+  .btn-toggle-sidebar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: rgb(19, 19, 20);
+  }
+  
+  .btn-toggle-sidebar:hover {
+    color: rgb(100, 100, 100);
+  }
+
+  /* Table of Contents */
+  #sidebar h4 {
+    margin-bottom: 2rem;
+  }
+
+  #table-of-contents ul {
+    font-size: 1rem;
+  }
+
+  #table-of-contents ul ul {
+    font-size: 1rem;
+  }
+
+  #table-of-contents a {
+    color: rgb(19, 19, 20) !important;
+    text-decoration: none !important;
+  }
+
+  /* Content Styles */
+.content {
+    margin-top: 80px; /* Adjust if your navbar height is different */
+  }
+  
+  /* Section Heading */
+  .section-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Section Introduction */
+  .section-intro {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Subsection Heading */
+  .subsection-heading {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  /* Paragraphs */
+  .content ul li,
+  .content p {
+    text-align: justify;
+    line-height: 1.5rem;
+  }
+  
+  /* Image Container */
+  .image-container {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 25px;
+  }
+  
+  /* Section Divider */
+  .section-divider {
+    border-top: 2px solid black;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Responsive Stacking for flex-row-reverse */
+  @media (max-width: 767.98px) {
+    .flex-row-reverse {
+      flex-direction: column !important;
+    }
+  }
+  
+/* miscellaneous */
+
+/* Accordion for bharat Jodo Yatra*/
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: black !important;
+}
+
+.accordion {
+  margin-bottom: 1.5rem;
+}
+
+
+/* Figure Configurations */
+
+#keh_voteshare,
+#keh_constwon  {
+  width: 100%;
+  height: 360px;
+}
+
+#BJYmap2018,
+#BJYmap2023 {
+  width: 100%;
+  height: 550px;
+}
+
+#BJYvoteshare {
+  width: 100%;
+  height: 360px;
+}
+
+#BJYconstshare {
+  width: 100%;
+  height: 360px;
+}
+
+#votesharetoptwoparties {
+  width: 100%;
+  height: 400px;
+}
+
+#enop {
+  width: 100%;
+  height: 400px;
+}
+
+
+
+/* About Section */
+
+.about-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 75%;
+  margin: auto;
+}
+
+.sub-subsection-heading {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  padding-left: 2.25rem; /* Indentation */
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  padding-left: 2.25rem; /* Additional indentation for hierarchy */
+}
+
+.section-intro a:hover {
+  text-decoration: none;
+}
+
+/* General Paragraph Styling */
+.about-content p {
+  text-align: justify;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Note Styling at the End of Sources and References */
+.section-note {
+  font-style: italic;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  color: rgb(19, 19, 20);
+  text-align: justify;
+}
+
+/* Styling for Planned Features List */
+.planned-features-list {
+  list-style-type: none;
+  padding-left: 2.25rem;
+  margin-top: 1rem;
+}
+
+.planned-features-list li {
+  margin-bottom: 0.25rem;
+  text-align: justify;
+}
+
+/* Highlighted topic names */
+.planned-features-list strong {
+  font-weight: bold;
+  color: #333;
+}
+
