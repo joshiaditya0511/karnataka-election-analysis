@@ -250,6 +250,15 @@ body.notification-visible .navbar {
   height: 400px;
 }
 
+#party_counts {
+  width: 100%;
+  height: 360px;
+}
+
+#independent_candidates {
+  width: 100%;
+  height: 360px;
+}
 
 
 /* About Section */

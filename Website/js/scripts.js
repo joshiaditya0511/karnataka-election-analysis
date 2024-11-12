@@ -37,7 +37,7 @@ function loadPlot(plotId, jsonFile) {
 
 function tableOfContents() {
   const tocContainer = document.getElementById('table-of-contents');
-  const sections = document.querySelectorAll('.section-heading');
+  const sections = document.querySelectorAll('.section-start');
 
   // Create a list element for the table of contents
   const tocList = document.createElement('ul');
@@ -56,11 +56,15 @@ function tableOfContents() {
     const sectionItem = document.createElement('li');
     const sectionLink = document.createElement('a');
     sectionLink.href = `#${section.id}`;
-    sectionLink.textContent = section.textContent;
+    console.log(`#${section.id}`);
+
+    const sectionText = section.querySelector('.section-heading').textContent;
+    sectionLink.textContent = sectionText;
+    // sectionLink.textContent = section.textContent;
     sectionItem.appendChild(sectionLink);
 
     // Find all subsections within the current section
-    const subsections = section.parentNode.querySelectorAll('.subsection-heading');
+    const subsections = section.querySelectorAll('.subsection-heading');
     if (subsections.length > 0) {
       // Create a nested list for subsections
       const subsectionList = document.createElement('ul');
@@ -165,6 +169,8 @@ document.addEventListener('DOMContentLoaded', function () {
   loadPlot('BJYconstshare', 'data/BJYconstshare.json');
   loadPlot('votesharetoptwoparties', 'data/votesharetoptwoparties.json');
   loadPlot('enop', 'data/enop.json');
+  loadPlot('party_counts', 'data/party_counts.json');
+  loadPlot('independent_candidates', 'data/independent_candidates.json');
 
 });
 

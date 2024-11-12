@@ -66,8 +66,8 @@
     <hr class="section-divider">
 
     <!-- Section 1 -->
-    <section>
-      <h2 class="section-heading" id="karnataka-electoral-history">Karnataka's Electoral History</h2>
+    <section id="karnataka-electoral-history" class="section-start">
+      <h2 class="section-heading">Karnataka's Electoral History</h2>
 
       <p class="section-intro">Karnataka's recent state assembly elections reveal shifting political patterns over the past decade. The results from 2013, 2018, and 2023 trace a path from decisive outcomes to nuanced shifts in vote share and constituency wins — reflecting how electoral dynamics evolve over time.</p>
 
@@ -101,7 +101,7 @@
               The <b>BJP</b> emerged as the winner, gaining a substantial increase in constituencies won and surpassing the INC by a notable margin.
             </li>
             <li>
-              <b>INC</b> a consistent vote share compared to 2013 but experienced a decrease in the number of constituencies won.
+              <b>INC</b> had consistent vote share compared to 2013 but experienced a decrease in the number of constituencies won.
             </li>
             <li>
               <b>Popularity vs. Preference:</b> Despite losing the election, the INC actually led in the popular vote, meaning it had a marginally higher total vote share percentage compared to the BJP, suggesting close contests in several areas.
@@ -141,8 +141,8 @@
 
     <hr class="section-divider">
 
-    <section>
-      <h2 class="section-heading" id="impact-of-the-bharat-jodo-yatra">Impact of the Bharat Jodo Yatra</h2>
+    <section id="impact-of-the-bharat-jodo-yatra" class="section-start">
+      <h2 class="section-heading">Impact of the Bharat Jodo Yatra</h2>
       <!-- <p class="section-intro">The Bharat Jodo Yatra (BJY), led by Rahul Gandhi and the Congress Party, covered 21 assembly constituencies in Karnataka. The Yatra spanned 511km in Karnataka over 22 days, moving from Gundlupet constituency to Raichur Rural constituency.</p> -->
       <div class="accordion" id="BJYaccordion">
         <div class="accordion-item">
@@ -225,8 +225,8 @@
     
     <hr class="section-divider">
 
-    <section>
-      <h2 class="section-heading" id="emerging-bipolarity-in-karnataka">Emerging Bi-polarity in Karnataka</h2>
+    <section id="emerging-bipolarity-in-karnataka" class="section-start">
+      <h2 class="section-heading">Emerging Bi-polarity in Karnataka</h2>
       <div class="row align-items-center mb-4">
         <h3 class="subsection-heading" id="the-power-shift-national-vs-regional-parties">The Power Shift: National vs. Regional Parties</h3>
         <div class="col-md-6">
@@ -252,6 +252,11 @@
       </div>
       <div class="row align-items-center mb-4">
         <h3 class="subsection-heading" id="effective-number-of-parties-enp">Effective Number of Parties (ENP)</h3>
+        <p>
+          The concept of the Effective Number of Parties (ENP) is used to measure the number of "effective" parties in a political system. It's not just a count of total parties; rather, it's a weighted measure that takes into consideration the relative strength of each party.
+          <br><br>
+          In a two-party system, the ENP will be close to 2, while in a system with many small parties, the ENP will be much higher.
+        </p>
         <div class="col-md-6">
           <!-- Image Container -->
           <div class="image-container">
@@ -259,10 +264,9 @@
             <div id="enop" class="plotly-chart"></div>
           </div>
         </div>
+
         <div class="col-md-6">
-          <p>
-            The concept of the Effective Number of Parties (ENP) is used to measure the number of "effective" parties in a political system. It's not just a count of total parties; rather, it's a weighted measure that takes into consideration the relative strength of each party.
-          </p>
+
           <div class="accordion" id="ENOPaccordion">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -344,8 +348,7 @@
             </div>
           </div>
           <p>
-            In a two-party system, the ENP will be close to 2, while in a system with many small parties, the ENP will be much higher. <br>
-            The idea of dwindling regional parties and the emergence of a bi-polarity in the political landscape is bolstered by this metric. A decreasing ENP over time would suggest a consolidation towards fewer dominant parties.
+            The charts clearly show the <b>consistent decline of the ENP metric</b> with respect to both - vote share and number of seats, suggesting the idea of dwindling regional parties and the emergence of a bi-polarity in the political landscape. 
           </p>
         </div>
 
@@ -354,9 +357,50 @@
 
     <hr class="section-divider">
 
+
+    <!-- Paradox of Participation Section -->
+    <section id="paradox-of-participation" class="section-start">
+      <h2 class="section-heading">The Paradox of Participation</h2>
+      <p class="section-intro">While earlier we observed that the two major national parties, BJP and INC, have been gaining a larger share of the votes—pointing towards a consolidation of power—there's another aspect of the elections that's worth exploring.</p>
+      <div class="row align-items-center mb-4">
+        <h3 class="subsection-heading" id="increasing-number-of-contesting-parties">Increasing Number of Contesting Parties</h3>
+        <div class="col-md-6">
+          <p>
+            Over the past three elections, the number of political parties contesting in Karnataka has notably increased. In 2013, there were 60 parties on the ballot. This number jumped to 92 in 2018 and remained consistent in 2023. At first glance, this seems paradoxical. If the BJP and INC are dominating the vote share, why are more parties choosing to enter the electoral race?
+            <br><br>
+            As a data scientist and not a political analyst, I can only offer my observations. Despite the dominance of the two major parties, the rise in the number of contesting parties might suggest that various groups are still eager to have their voices heard. This increase could reflect emerging local issues, regional aspirations, or new political movements aiming to influence the political discourse. It highlights that our democracy remains vibrant and dynamic, with multiple parties contributing to a diverse political landscape.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="party_counts" class="plotly-chart"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4">
+        <h3 id="decreasing-number-of-independent-candidates" class="subsection-heading">Decreasing Number of Independent Candidates</h3>
+        <div class="col-md-6">
+          <!-- Image Container -->
+          <div class="image-container">
+            <!-- Plotly graph will be rendered here -->
+            <div id="independent_candidates" class="plotly-chart"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p>
+            Conversely, the number of independent candidates has been steadily decreasing over the same period. While more parties are entering the fray, fewer individuals are choosing to run without party affiliation. From my perspective as a data scientist, this might indicate that candidates see greater value in aligning with an established party, even if it's a smaller one, rather than going it alone. This could be due to the support and resources that parties provide, making it challenging for independents to compete on their own. Ultimately, this trend suggests that parties are becoming the main avenue for political participation, with individuals preferring to be part of a collective rather than stand alone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
     <!-- About Section -->
-    <section class="about-section">
-      <h2 id="about" class="section-heading">About This Project</h2>
+    <section id="about" class="about-section section-start">
+      <h2 class="section-heading">About This Project</h2>
 
       <!-- Introduction -->
       <p class="section-intro">
