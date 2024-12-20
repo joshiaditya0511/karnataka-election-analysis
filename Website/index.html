@@ -3,11 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karnataka Elections Analysis</title>
+
+  <title>Karnataka Election Analysis</title>
+
+  <meta name="description" content="This analysis dives deep into the Karnataka Assembly Elections, exploring elements such as vote counts, candidate details, vote margins, and the impact of events like the Bharat Jodo Yatra. All visualizations are interactive to provide an engaging and informative user experience." />
+  <meta name="keywords" content="Data Science, Elections Analysis, Data Analysis, Elections" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Karnataka Election Analysis" />
+  <meta property="og:description" content="This analysis dives deep into the Karnataka Assembly Elections, exploring elements such as vote counts, candidate details, vote margins, and the impact of events like the Bharat Jodo Yatra. All visualizations are interactive to provide an engaging and informative user experience." />
+  <meta property="og:image" content="https://kea.adityajoshi.in/assets/kea.jpg" /> 
+  <meta property="og:url" content="https://kea.adityajoshi.in" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Karnataka Election Analysis" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Karnataka Election Analysis">
+  <meta name="twitter:description" content="This analysis dives deep into the Karnataka Assembly Elections, exploring elements such as vote counts, candidate details, vote margins, and the impact of events like the Bharat Jodo Yatra. All visualizations are interactive to provide an engaging and informative user experience." />
+  <meta name="twitter:image" content="https://kea.adityajoshi.in/assets/kea.jpg">
+
+
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Umami Analytics -->
+  <script defer src="/script.js" data-website-id="280fdd27-8ecd-42bd-9424-f88ae2fc8f7b"></script>
 
 </head>
 <body>
@@ -366,7 +394,7 @@
         <h3 class="subsection-heading" id="increasing-number-of-contesting-parties">Increasing Number of Contesting Parties</h3>
         <div class="col-md-6">
           <p>
-            Over the past three elections, the number of political parties contesting in Karnataka has notably increased. In 2013, there were 60 parties on the ballot. This number jumped to 92 in 2018 and remained consistent in 2023. At first glance, this seems paradoxical. If the BJP and INC are dominating the vote share, why are more parties choosing to enter the electoral race?
+            Over the past three elections, the number of political parties contesting in Karnataka has notably increased. In 2013, there were 59 parties on the ballot. This number jumped to 91 in 2018 and remained consistent in 2023. At first glance, this seems paradoxical. If the BJP and INC are dominating the vote share, why are more parties choosing to enter the electoral race?
             <br><br>
             As a data scientist and not a political analyst, I can only offer my observations. Despite the dominance of the two major parties, the rise in the number of contesting parties might suggest that various groups are still eager to have their voices heard. This increase could reflect emerging local issues, regional aspirations, or new political movements aiming to influence the political discourse. It highlights that our democracy remains vibrant and dynamic, with multiple parties contributing to a diverse political landscape.
           </p>
@@ -398,6 +426,112 @@
 
     <hr class="section-divider">
 
+    <section id="party-turnover-swing-direction" class="section-start">
+      <h2 class="section-heading">Party Turnover and Swing Direction</h2>
+      <p class="section-intro">Every election cycle, a number of constituencies change their political color as seats move from one party to another, a phenomenon often described as “party turnover” or “swing direction.” These shifts offer valuable insights into voter sentiment, anti-incumbency trends, and the evolving balance of power on the state's electoral map.</p>
+      <div class="row align-items-center mb-4">
+        <div class="col-md-5">
+          <div class="table-container" id="party-turnover-swing-direction-13-to-18">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <h3 class="subsection-heading" id="a-cycle-of-major-party-swings">A Cycle of Major Party Swings</h3>
+          <p>
+            Between 2013 and 2018, a clear pattern emerged: the biggest shift was from the INC to the BJP, involving 58 constituencies. This dramatic turnover helped the BJP recover from its previous defeat and placed it in a stronger position by 2018. However, by the 2023 election, the direction of movement reversed, with 41 constituencies moving from the BJP to the INC. These swings suggest a repetitive cycle where the party in power often faces a strong wave of anti-incumbency, losing its advantage to the other main national player in the next election.
+          </p>
+          <h3 class="subsection-heading" id="two-party-axis-at-the-core">The Two-Party Axis at the Core</h3>
+          <p>
+            Although JD(S) and a group of “Others” (smaller parties and independents) exist, most significant turnovers occur between the two national parties: the INC and the BJP. For instance, while JD(S) and Others occasionally gain seats, the big story across both election cycles has been the back-and-forth exchange of constituencies between INC and BJP. This pattern shows that Karnataka's political battlefield, at its heart, is shaped like a tug-of-war between these two main contenders.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4">
+        <div class="col-md-7">
+          <h3 class="subsection-heading" id="jds-caught-in-the-crossfire">JD(S) Caught in the Crossfire</h3>
+          <p>
+            JD(S) consistently experiences a mix of gains and losses but struggles to break the cycle of losing more ground than it holds onto. Between 2013 and 2018, it both lost and gained seats to and from the INC and BJP, ending up more as a swing player than a stable force. A similar churn continued between 2018 and 2023, with JD(S) again conceding seats to both major parties. Rather than emerging as a solid third front, JD(S) remains on shifting sands, vulnerable to the intense competition between INC and BJP.
+          </p>
+          <h3 class="subsection-heading" id="diminishing-others-and-the-impact-of-distribution">Diminishing “Others” and the Impact of Distribution</h3>
+          <p>
+            In the earlier cycle (2013-2018), smaller parties and independents surrendered several seats to the main trio. By 2018-2023, these “Others” became nearly irrelevant, losing or gaining very few constituencies. Coupled with the first-past-the-post system, the result is that even a modest lead in vote share for the leading party can translate into disproportionately large seat gains. As a result, focused campaigning and strategic concentration of votes play a major role in producing big swings, and the entire landscape now appears locked in a dynamic, two-party-dominated struggle.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <div class="table-container" id="party-turnover-swing-direction-18-to-23">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section id="its-all-about-the-margins" class="section-start">
+      <h2 class="section-heading">It's All About the Margins</h2>
+      <div class="row align-items-center mb-4">
+        <h3 class="subsection-heading" id="battleground-constituencies">Battleground Constituencies: A Close Look at Three Election Cycles</h3>
+        <p>
+          In every election, certain constituencies emerge as battlegrounds—places where the competition is fierce and the outcomes are decided by razor-thin margins. For this analysis, we classified constituencies as "battlegrounds" if the winning margin was less than 5% in all three consecutive assembly elections (2013, 2018, and 2023). This criterion highlights areas where voters are deeply divided, and every vote carries significant weight.
+          <br><br>
+          Using this definition, six constituencies—Bailhongal, Haliyal, Hosakote, Sringeri, Tumkur City, and Tumkur Rural—stand out. Here's what the data reveals about these consistently close contests:
+        </p>
+      </div>
+      <div class="row align-items-center mb-4 mt-2">
+        <div class="col-md-5">
+          <div class="table-container" id="battleground-constituencies-table-summary">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <p>
+            <b>Persistent Tight Races:</b>
+            Each of these constituencies has witnessed remarkably close contests over three election cycles. The winning margin has consistently remained under 5%, signaling a near-even split in voter preferences. This pattern underlines how these constituencies remain unpredictable and fiercely competitive.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4">
+        <div class="col-md-4">
+          <p>
+            <b>Switching Parties Doesn't Always Switch Fortunes:</b> In some constituencies, candidates attempted to change their political fortunes by switching parties, but the results remained unchanged. For example:
+          </p>
+          <p>
+            In Bailhongal, Jagadish C. Metgud ran as a BJP candidate in 2013, as an Independent in 2018, and returned to BJP in 2023. Yet, in all three elections, he ended up as the runner-up.
+          </p>
+        </div>
+        <div class="col-md-8">
+          <div class="table-container" id="battleground-constituencies-table-bailhongal">
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4 mt-2">
+        <div class="col-md-8">
+          <div class="table-container" id="battleground-constituencies-table-haliyal">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <p>
+            Similarly, in Haliyal, Sunil Hegade moved from JD(S) to BJP over the years but remained in second place in all three contests.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4 mt-2">
+        <div class="col-md-5">
+          <p>
+            <b>Party Loyalty Over Candidate Loyalty in Hosakote:</b> The case of Hosakote offers a unique insight into voter behavior. Here, N Nagaraju won elections in 2013 and 2018 as a Congress (INC) candidate, defeating BJP-backed opponents. By 2023, both Nagaraju and his main opponent, Sharath Kumar Bachegowda, had switched parties—Nagaraju moved to BJP, and Bachegowda to INC. Despite this, INC retained the seat with Bachegowda now representing the party. 
+            <br><br>
+            This outcome hints that voters in Hosakote may prioritize party loyalty over individual candidates, favoring the party symbol that previously won over the personality behind it.
+          </p>
+        </div>
+        <div class="col-md-7">
+          <div class="table-container" id="battleground-constituencies-table-hosakote"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <h2 class="section-heading" style="color: red;">More Analysis Coming Soon!</h2>
+
+    <hr class="section-divider">
+
     <!-- About Section -->
     <section id="about" class="about-section section-start">
       <h2 class="section-heading">About This Project</h2>
@@ -415,6 +549,20 @@
         <strong>Note:</strong> To view the code for this project and explore the tools and technologies I used, visit my GitHub repository: 
         <a href="https://github.com/joshiaditya0511/karnataka-election-analysis" target="_blank">GitHub Repository</a>.
       </p>
+
+      <!-- Get in Touch Section -->
+      <div class="about-content">
+        <h3 id="get-in-touch" class="subsection-heading">Get in Touch</h3>
+        <p class="section-intro">If you have any questions, suggestions, or feedback, feel free to connect with me on:</p>
+        <ul class="planned-features-list">
+          <li>
+            <a href="https://adityajoshi.in" target="_blank"> Personal Website</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/joshiaditya0511" target="_blank"> LinkedIn</a>
+          </li>
+        </ul>
+      </div>
 
       <!-- Using This Site Section -->
       <div class="about-content">
@@ -503,19 +651,7 @@
         </ul>
       </div>
 
-      <!-- Get in Touch Section -->
-      <div class="about-content">
-        <h3 id="get-in-touch" class="subsection-heading">Get in Touch</h3>
-        <p class="section-intro">If you have any questions, suggestions, or feedback, feel free to connect with me on:</p>
-        <ul class="planned-features-list">
-          <li>
-            <a href="https://adityajoshi.in" target="_blank"> Personal Website</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/joshiaditya0511" target="_blank"> LinkedIn</a>
-          </li>
-        </ul>
-      </div>
+
 
     </section>
 

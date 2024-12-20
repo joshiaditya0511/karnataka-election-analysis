@@ -26,6 +26,20 @@ var plotConfig = {
   dragmode: false
 };
 
+var mapPlotConfig = {
+  staticPlot: false,
+  editable: false,
+  editSelection: false,
+  showAxisRangeEntryBoxes: false,
+  responsive: true,
+  scrollZoom: false,
+  doubleClick: false,
+  showAxisDragHandles: false,
+  displayModeBar: false,
+  dragmode: false,
+  staticPlot: true
+};
+
 function loadPlot(plotId, jsonFile) {
   fetch(jsonFile)
     .then((response) => response.json())
@@ -144,9 +158,88 @@ function loadMapPlot(plotId, jsonFile) {
     .then((response) => response.json())
     .then((plotData) => {
       assignGeoJSON(plotData); // Inject geojson data
-      Plotly.newPlot(plotId, plotData.data, plotData.layout, plotConfig);
+      Plotly.newPlot(plotId, plotData.data, plotData.layout, mapPlotConfig);
     })
     .catch((error) => console.error("Error loading plot:", error));
+}
+
+function loadTable(id, path, fontSize = '0.8rem') {
+  const container = document.getElementById(id);
+  if (!container) {
+    console.error(`Element with id "${id}" not found.`);
+    return;
+  }
+
+  // Optional: Clear container and add a class to center its contents overall if desired
+  // container.className = 'd-flex flex-column justify-content-center align-items-center';
+
+  fetch(path)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then(jsonData => {
+      const { title, data } = jsonData;
+      if (!data || typeof data !== 'object') {
+        throw new Error('Invalid data format in JSON');
+      }
+
+      const columns = Object.keys(data);
+      const numRows = data[columns[0]].length;
+
+      const table = document.createElement('table');
+      // Bootstrap classes and inline style for smaller font and full width
+      table.className = 'table table-bordered table-striped table-sm text-center align-middle w-100';
+      table.style.fontSize = fontSize; // Adjust font-size as desired
+      table.style.marginBottom = '0.6rem';
+
+      const thead = document.createElement('thead');
+      thead.style.verticalAlign = 'middle';
+      const headerRow = document.createElement('tr');
+      columns.forEach(col => {
+        const th = document.createElement('th');
+        th.textContent = col;
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+
+      const tbody = document.createElement('tbody');
+      for (let i = 0; i < numRows; i++) {
+        const row = document.createElement('tr');
+        columns.forEach(col => {
+          const td = document.createElement('td');
+          td.textContent = data[col][i];
+          row.appendChild(td);
+        });
+        tbody.appendChild(row);
+      }
+
+      table.appendChild(thead);
+      table.appendChild(tbody);
+
+      // Create a centered title element below the table
+      const titleElement = document.createElement('h5');
+      titleElement.textContent = title;
+      titleElement.className = 'text-center';
+      titleElement.style.fontSize = '0.9rem'; // Slightly smaller than default h2
+      titleElement.style.fontWeight = 'bold';
+      titleElement.style.marginTop = '0';
+
+      container.innerHTML = '';
+      // Add a wrapper to ensure everything is centered inside the container
+      const wrapper = document.createElement('div');
+      wrapper.className = 'w-100 d-flex flex-column justify-content-center align-items-center';
+      wrapper.appendChild(table);
+      wrapper.appendChild(titleElement);
+
+      container.appendChild(wrapper);
+    })
+    .catch(error => {
+      console.error('Error fetching or building table:', error);
+      container.innerHTML = '<p class="text-danger text-center">Failed to load table data.</p>';
+    });
 }
 
 
@@ -171,6 +264,14 @@ document.addEventListener('DOMContentLoaded', function () {
   loadPlot('enop', 'data/enop.json');
   loadPlot('party_counts', 'data/party_counts.json');
   loadPlot('independent_candidates', 'data/independent_candidates.json');
+
+  // Load table data
+  loadTable('battleground-constituencies-table-bailhongal', 'data/battleground_constituencies_bailhongal.json');
+  loadTable('battleground-constituencies-table-haliyal', 'data/battleground_constituencies_haliyal.json');
+  loadTable('battleground-constituencies-table-hosakote', 'data/battleground_constituencies_hosakote.json');
+  loadTable('battleground-constituencies-table-summary', 'data/battleground_constituencies_summary.json');
+  loadTable('party-turnover-swing-direction-13-to-18', 'data/party_turnover_13to18.json', '0.95rem');
+  loadTable('party-turnover-swing-direction-18-to-23', 'data/party_turnover_18to23.json', '0.95rem');
 
 });
 
