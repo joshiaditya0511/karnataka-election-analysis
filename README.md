@@ -40,7 +40,7 @@ This analysis dives deep into the Karnataka Assembly Elections, exploring elemen
 ### Data Wrangling:
 
 - `Pandas` and `Regular Expressions`: Key tools for data cleaning and organization.
-- `OpenAI API`: Used GPT-3.5 for segmenting and categorizing education and profession data from candidate details.
+- `OpenAI API`: Used OpenAI Batch API with GPT-4o-mini for segmenting and categorizing education and profession data from candidate details.
 
 ### Data Visualization:
 

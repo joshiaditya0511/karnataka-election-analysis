@@ -244,6 +244,10 @@ function loadTable(id, path, fontSize = '0.8rem') {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+
+  // Toggle Sidebar
+  // sidebar.classList.toggle('sidebar-active');
+
   
   notificationStrip();
   tableOfContents();
