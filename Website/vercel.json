@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/script.js",
+        "destination": "https://cloud.umami.is/script.js"
+      }
+    ]
+  }
+  
